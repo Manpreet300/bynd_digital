@@ -1,10 +1,12 @@
 export const palettes = {
-  gray: "#E4E4E4",
-  light: "#FFFFFF",
-  white: "#FFFFFF",
-  bynd_red: "#FF5851",
-  textDark: "#1D1C20",
-
+  gray: "var(--gray-bg)",
+  light: "var(--background)",
+  white: "var(--white-bg)",
+  bynd_red: "var(--accent-color)",
+  textDark: "var(--text-color)",
+  textSecondary: "var(--secondary-text)",
+  iconColor: "var(--icon-color)",
+  borderColor: "var(--border-color)",
 } as const;
  
-export type Palette = typeof palettes
+export type Palette = typeof palettes;

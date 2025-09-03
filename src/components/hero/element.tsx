@@ -20,10 +20,10 @@ export const LeftSection = ({ children }: { children?: React.ReactNode }) => (
   <div
     style={{
       flex: 1,
-      backgroundColor: "#e0e0e0",
+      backgroundColor: palettes.gray,
       position: "relative", // ✅ allow absolute positioning
       overflow: "hidden",   // ✅ hides OffCanvas when off-screen
-      
+
     }}
   >
     {children}
