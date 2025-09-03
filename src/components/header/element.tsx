@@ -11,7 +11,7 @@ export const HeaderContainer = styled('header')(() => ({
   alignItems: "center",
   padding: '2rem 0', // Vertical padding
   backgroundColor: "#fff",
-  position: 'relative',
+  position: 'fixed',
 
   "&::before": {
     content: '""',

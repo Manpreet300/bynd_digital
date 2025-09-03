@@ -5,9 +5,9 @@ import { palettes } from "@/components/themes/palettes";
 
 export const HeroContainer = styled('div')({
   flex: 1,
-  position: 'fixed',
+  position: 'absolute',
   width: '100%',
-});
+  height: '100%',});
 
 export const SplitView = styled('div')({
   display: 'flex',

@@ -4,7 +4,8 @@ import { palettes } from "@/components/themes/palettes";
 
 export const CTAContainer = styled("section")({
 
-  paddingTop: "504px",
+  
+  width: "100%",
   minHeight: "100vh",
   display: "flex",
   justifyContent: "center",
