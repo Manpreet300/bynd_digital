@@ -1,13 +1,26 @@
 :root {
+  /* Light mode variables */
   --background: #ffffff;
   --foreground: #171717;
+  --gray-bg: #e0e0e0;
+  --white-bg: #ffffff;
+  --text-color: #1D1C20;
+  --secondary-text: #666666;
+  --accent-color: #FF5851;
+  --border-color: #6e43c4;
+  --icon-color: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='dark'] {
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --gray-bg: #404040;
+  --white-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --secondary-text: #a0a0a0;
+  --accent-color: #FF5851;
+  --border-color: #8e63e4;
+  --icon-color: #ffffff;
 }
 
 html,
@@ -17,11 +30,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-color);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -35,15 +49,38 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-body.dark-mode .LeftSection {
-  background-color: #1e1e1e; /* dark background */
+
+[data-theme='dark'] .LeftSection {
+  background-color: var(--gray-bg);
 }
 
-body.dark-mode .RightSection {
-  background-color: #2a2a2a; /* dark background */
+[data-theme='dark'] .RightSection {
+  background-color: var(--white-bg);
+}
+
+[data-theme='dark'] .HeaderContainer {
+  background-color: var(--background);
+}
+
+[data-theme='dark'] .HeaderContainer::before {
+  background-color: var(--border-color);
+}
+
+[data-theme='dark'] .LanguageItem {
+  color: var(--secondary-text);
+}
+
+[data-theme='dark'] .LanguageItem[data-active='true'] {
+  color: var(--text-color);
+}
+
+[data-theme='dark'] .StyledIconButton,
+[data-theme='dark'] .MenuText,
+[data-theme='dark'] .ScrollText,
+[data-theme='dark'] .CentralText {
+  color: var(--icon-color);
+}
+
+[data-theme='dark'] .HamburgerButton div {
+  background-color: var(--icon-color);
 }
