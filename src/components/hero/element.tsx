@@ -5,7 +5,7 @@ import { palettes } from "@/components/themes/palettes";
 
 export const HeroContainer = styled('div')({
   flex: 1,
-  position: 'relative',
+  position: 'fixed',
   width: '100%',
 });
 
@@ -49,7 +49,7 @@ export const CentralText = styled('div')({
   transform: "translate(-50%, -50%)",
   zIndex: 2,
   color: palettes.textDark,
-  fontFamily: "'Helvetica Neue', 'Arial Black', sans-serif",
+fontFamily: "var(--font-montserrat)",  // ✅ Apply Montserrat
   fontSize: "200px",
   fontWeight: 800,
   lineHeight: 0.9,

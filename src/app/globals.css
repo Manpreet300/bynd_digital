@@ -47,3 +47,17 @@ body.dark-mode .LeftSection {
 body.dark-mode .RightSection {
   background-color: #2a2a2a; /* dark background */
 }
+
+
+:root {
+  --font-fraunces: 'Fraunces', serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+.fraunces {
+  font-family: var(--font-fraunces);
+}
+
+.montserrat {
+  font-family: var(--font-montserrat);
+}
