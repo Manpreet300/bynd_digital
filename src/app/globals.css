@@ -49,14 +49,12 @@ a {
   text-decoration: none;
 }
 
-
-[data-theme='dark'] .LeftSection {
-  background-color: var(--gray-bg);
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
 }
 
-[data-theme='dark'] .RightSection {
-  background-color: var(--white-bg);
-}
 
 [data-theme='dark'] .HeaderContainer {
   background-color: var(--background);
