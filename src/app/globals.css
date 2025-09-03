@@ -58,7 +58,6 @@ a {
   background-color: var(--white-bg);
 }
 
-<<<<<<< HEAD
 [data-theme='dark'] .HeaderContainer {
   background-color: var(--background);
 }
@@ -84,18 +83,4 @@ a {
 
 [data-theme='dark'] .HamburgerButton div {
   background-color: var(--icon-color);
-=======
-
-:root {
-  --font-fraunces: 'Fraunces', serif;
-  --font-montserrat: 'Montserrat', sans-serif;
-}
-
-.fraunces {
-  font-family: var(--font-fraunces);
-}
-
-.montserrat {
-  font-family: var(--font-montserrat);
->>>>>>> 43d91f7b631bf8c9a7b1cdf603b499338a535bdd
 }
