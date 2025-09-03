@@ -6,13 +6,14 @@ import { MenuProps } from "./menu.interface";
 export const MenuWrapper = styled.div`
   position: absolute;
   top: 50%;
-  left: 0; // Aligned to the very left of the gray area
+  left: 0 ; // Aligned to the very left of the gray area
   transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
   z-index: 5;
+  overflow: hidden;
 `;
 
 // ... HamburgerButton and MenuText are unchanged

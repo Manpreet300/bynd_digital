@@ -9,7 +9,7 @@ export const HeaderContainer = styled('header')(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: '2rem 0', // Vertical padding
+  padding: '2rem 4rem', // Vertical padding
   backgroundColor: "#fff",
   position: 'fixed',
 
