@@ -9,8 +9,8 @@ export const HeaderContainer = styled('header')(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: '2rem 0', // Vertical padding
-  backgroundColor: "#fff",
+  padding: '2rem 4rem', // Vertical padding
+  backgroundColor: palettes.light,
   position: 'relative',
 
   "&::before": {
@@ -20,7 +20,7 @@ export const HeaderContainer = styled('header')(() => ({
     left: '-4rem', // Breaks out of the parent's side padding
     right: '-4rem',// Breaks out of the parent's side padding
     height: "3px",
-    backgroundColor: "#6e43c4",
+    backgroundColor: palettes.borderColor,
   },
 }));
 

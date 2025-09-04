@@ -1,6 +1,7 @@
 // components/social-icons/social-icon.element.tsx
 "use client";
 import { styled } from "@mui/material/styles";
+import { palettes } from "../themes/palettes";
 
 export const SocialWrapper = styled('div')({
   position: 'absolute',
@@ -19,7 +20,7 @@ export const StyledIconButton = styled('button')({
     border: 'none',
     padding: 0,
     cursor: 'pointer',
-    color: '#000',
+    color: palettes.iconColor,
     display: 'flex',
     '&:hover': {
         opacity: 0.7,

@@ -15,12 +15,15 @@
   --background: #1a1a1a;
   --foreground: #ffffff;
   --gray-bg: #404040;
-  --white-bg: #1e1e1e;
+  --white-bg: #1a1a1a;
   --text-color: #ffffff;
   --secondary-text: #a0a0a0;
   --accent-color: #FF5851;
   --border-color: #8e63e4;
   --icon-color: #ffffff;
+}
+[data-theme='dark'] .LogoText {
+  color: var(--text-color);
 }
 
 html,

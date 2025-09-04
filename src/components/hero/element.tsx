@@ -2,12 +2,15 @@
 "use client";
 import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
+import { Padding } from "@mui/icons-material";
 
 export const HeroContainer = styled('div')({
   flex: 1,
   position: 'absolute',
   width: '100%',
-  height: '100%',});
+  height: '100vh',
+  padding: '0rem 4rem',
+});
 
 export const SplitView = styled('div')({
   display: 'flex',
