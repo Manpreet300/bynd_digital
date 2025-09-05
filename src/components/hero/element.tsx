@@ -2,7 +2,6 @@
 "use client";
 import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
-import { Padding } from "@mui/icons-material";
 
 export const HeroContainer = styled('div')({
   flex: 1,
