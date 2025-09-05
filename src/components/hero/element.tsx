@@ -6,7 +6,7 @@ import { Padding } from "@mui/icons-material";
 
 export const HeroContainer = styled('div')({
   flex: 1,
-  position: 'absolute',
+  position: 'relative',
   width: '100%',
   height: '100vh',
   padding: '0rem 4rem',
