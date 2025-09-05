@@ -22,10 +22,10 @@ export const Elevate: React.FC = () => {
     <ElevateSection>
       <ElevateContainer>
 
-        <CallToActionWrapper>
+          <CallToActionWrapper>
           <FlourishImage src={FLOURISH_IMAGE_SRC} alt="Decorative flourish" />
           <LetsTalkButton>
-            LET'S TALK <ArrowRight />
+            LET&apos;S TALK <ArrowRight />
           </LetsTalkButton>
         </CallToActionWrapper>
 

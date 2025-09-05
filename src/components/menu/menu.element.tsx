@@ -2,7 +2,6 @@
 "use client";
 import styled from "@emotion/styled";
 import { MenuProps } from "./menu.interface";
-import { Pallet } from "@mui/icons-material";
 import { palettes } from "../themes/palettes";
 
 export const MenuWrapper = styled.div`
