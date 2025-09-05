@@ -9,6 +9,7 @@ export const HeroContainer = styled('div')({
   width: '100%',
   height: '100vh',
   padding: '0rem 4rem 4rem',
+  // s
 });
 
 export const SplitView = styled('div')({
