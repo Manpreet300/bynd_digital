@@ -1,6 +1,7 @@
 "use client";
 import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
+import { fraunces, montserrat } from "@/components/themes/typography";
 
 export const ElevateSection = styled('section')({
   backgroundColor: palettes.gray,
@@ -38,7 +39,7 @@ export const FlourishImage = styled('img')({
 export const LetsTalkButton = styled('button')({
   backgroundColor: palettes.bynd_red,
   color: palettes.white,
-  fontFamily: 'var(--font-montserrat)',
+  fontFamily: 'var(--font-fraunces)',
   border: 'none',
   borderRadius: '50px',
   padding: '0.8rem 1.5rem',
@@ -90,12 +91,11 @@ export const UnderlineImage = styled('img')({
 });
 
 export const QuestionMarkImage = styled('img')({
-
-  width: '150px',
-  height: '150px',
-  marginLeft: '0.5rem',
-  verticalAlign: 'bottom',
-
-  // position: 'relative',
-  bottom: '10px',
+  display: 'inline-block',
+  width: '1em',        // match text size
+  height: '1em',
+  marginLeft: '0.2rem', // small spacing before ?
+  verticalAlign: 'baseline', // aligns with text baseline
+  userSelect: 'none',
+  pointerEvents: 'none',
 });

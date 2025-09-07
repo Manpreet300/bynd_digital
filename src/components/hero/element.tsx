@@ -3,13 +3,15 @@
 import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
 
+
 export const HeroContainer = styled('div')({
   flex: 1,
   position: 'relative',
   width: '100%',
   height: '100vh',
   padding: '0rem 4rem 4rem',
-  // s
+ 
+
 });
 
 export const SplitView = styled('div')({
@@ -52,10 +54,10 @@ export const CentralText = styled('div')({
   transform: "translate(-50%, -50%)",
   zIndex: 2,
   color: palettes.textDark,
-fontFamily: "var(--font-montserrat)",  // ✅ Apply Montserrat
+  fontFamily: "var(--font-fraunces) !important",
   fontSize: "200px",
   fontWeight: 800,
-  lineHeight: 0.9,
+  lineHeight: 0.9,    
   letterSpacing: "-0.05em",
   userSelect: 'none',
 });

@@ -7,7 +7,7 @@ import { Elevate } from "@/components/elevate/elevate";
 export default function HomePage() {
   return (
     <>
-      <Header />
+   <div><Header /></div>   
       <Hero />
       <Elevate />
     </>

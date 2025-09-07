@@ -11,7 +11,7 @@ import {
   UnderlineImage,
   QuestionMarkImage // Import the new image component
 } from "./elements";
-
+import  { fraunces, montserrat } from "@/components/themes/typography";
 // Define all your image sources at the top
 const FLOURISH_IMAGE_SRC = "/quotation.png";
 const UNDERLINE_IMAGE_SRC = "/underline.png";
@@ -29,17 +29,16 @@ export const Elevate: React.FC = () => {
           </LetsTalkButton>
         </CallToActionWrapper>
 
-        <ElevateText>
-          Are you <span style={{ position: 'relative' }}>
-            ready
-            <UnderlineImage src={UNDERLINE_IMAGE_SRC} alt="Red underline" />
-          </span> to elevate your<br/>
-          <span className="digital-presence">
-            digital presence
-          </span>
-       
-          <QuestionMarkImage src={QUESTION_MARK_SRC} alt="Question mark" />
-        </ElevateText>
+        <ElevateText  className={fraunces.className}>
+  Are you <span style={{ position: 'relative' }}>
+    ready
+    <UnderlineImage src={UNDERLINE_IMAGE_SRC} alt="Red underline" />
+  </span> to elevate your<br/>
+  <span className="digital-presence">
+    digital presence
+    <QuestionMarkImage src={QUESTION_MARK_SRC} alt="Question mark" />
+  </span>
+</ElevateText>
 
       </ElevateContainer>
     </ElevateSection>
