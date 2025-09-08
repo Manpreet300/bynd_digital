@@ -9,15 +9,10 @@ import {
   ArrowRight,
   ElevateText,
   UnderlineImage,
-  QuestionMarkImage 
+  QuestionMarkImage // Import the new image component
 } from "./elements";
-<<<<<<< HEAD
-import  { fraunces, montserrat } from "@/components/themes/typography";
-// Define all your image sources at the top
-=======
-import { fraunces } from "@/components/themes/typography";
 
->>>>>>> 3de3a0eca4228232b926d6a81176340d6ae0c5c5
+// Define all your image sources at the top
 const FLOURISH_IMAGE_SRC = "/quotation.png";
 const UNDERLINE_IMAGE_SRC = "/underline.png";
 const QUESTION_MARK_SRC = "/question.png"; // Add the new image source
@@ -25,16 +20,16 @@ const QUESTION_MARK_SRC = "/question.png"; // Add the new image source
 export const Elevate: React.FC = () => {
   return (
     <ElevateSection>
-      <ElevateContainer className={fraunces.variable}>
+      <ElevateContainer>
 
-        <CallToActionWrapper>
+          <CallToActionWrapper>
           <FlourishImage src={FLOURISH_IMAGE_SRC} alt="Decorative flourish" />
           <LetsTalkButton>
             LET&apos;S TALK <ArrowRight />
           </LetsTalkButton>
         </CallToActionWrapper>
 
-        <ElevateText  className={fraunces.className}>
+        <ElevateText>
   Are you <span style={{ position: 'relative' }}>
     ready
     <UnderlineImage src={UNDERLINE_IMAGE_SRC} alt="Red underline" />

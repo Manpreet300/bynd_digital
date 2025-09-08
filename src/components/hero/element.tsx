@@ -2,7 +2,8 @@
 "use client";
 import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
-
+import { fraunces } from "@/components/themes/typography";
+import { montserrat } from "@/components/themes/typography";
 
 export const HeroContainer = styled('div')({
   flex: 1,
@@ -54,7 +55,7 @@ export const CentralText = styled('div')({
   transform: "translate(-50%, -50%)",
   zIndex: 2,
   color: palettes.textDark,
-  fontFamily: "var(--font-fraunces) !important",
+  fontFamily:montserrat.style.fontFamily,
   fontSize: "200px",
   fontWeight: 800,
   lineHeight: 0.9,    

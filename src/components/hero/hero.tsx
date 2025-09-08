@@ -7,7 +7,6 @@ import { OffCanvas } from "@/components/off_canvas/off_canvas";
 import { SocialIcon } from "@/components/social-icons/social-icon";
 import { ScrollIndicator } from "@/components/common/ScrollIndicator";
 import { DarkModeToggle } from "@/components/common/DarkModeToggle";
-import  { fraunces, montserrat } from "@/components/themes/typography";
 export const Hero: React.FC = () => {
   const [isCanvasOpen, setIsCanvasOpen] = React.useState(false);
 
@@ -28,7 +27,7 @@ export const Hero: React.FC = () => {
         </RightSection>
       </SplitView>
 
-      <CentralText className={montserrat.className}>
+      <CentralText>
         BY<br />
         ND<RedDot />
       </CentralText>

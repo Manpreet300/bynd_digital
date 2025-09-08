@@ -1,7 +1,8 @@
 "use client";
 import { styled } from "@mui/material/styles";
-import { palettes } from "@/components/themes/palettes";
 import { fraunces, montserrat } from "@/components/themes/typography";
+import { palettes } from "@/components/themes/palettes";
+
 
 export const ElevateSection = styled('section')({
   backgroundColor: palettes.gray,
@@ -39,7 +40,7 @@ export const FlourishImage = styled('img')({
 export const LetsTalkButton = styled('button')({
   backgroundColor: palettes.bynd_red,
   color: palettes.white,
-  fontFamily: 'var(--font-fraunces)',
+   fontFamily: fraunces.style.fontFamily,
   border: 'none',
   borderRadius: '50px',
   padding: '0.8rem 1.5rem',
@@ -61,15 +62,17 @@ export const ArrowRight = styled('span')({
   display: 'inline-block',
   border: 'solid white',
   borderWidth: '0 2px 2px 0',
+  fontFamily: fraunces.style.fontFamily,
   padding: '3px',
   transform: 'rotate(-45deg)',
+  fontWeight: 600,
 });
 
 export const ElevateText = styled('h2')({
   fontSize: '6rem',
+  fontFamily: fraunces.style.fontFamily,
   fontWeight: 600,
   color: palettes.textDark,
-  fontFamily: 'var(--font-fraunces)',
   lineHeight: 1.3,
   userSelect: 'none',
   textAlign: 'center',
