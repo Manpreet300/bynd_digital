@@ -1,7 +1,7 @@
 "use client";
 import { styled } from "@mui/material/styles";
-import { fraunces } from "@/components/themes/typography";
-import { montserrat } from "@/components/themes/typography";
+import { fraunces } from "@/components/themes/primary/typography";
+import { montserrat } from "@/components/themes/primary/typography";
 import { Typography } from "@mui/material";
 export const StrategiesContainer = styled("div")({
   display: "flex",

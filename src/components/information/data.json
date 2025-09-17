@@ -1,0 +1,113 @@
+{
+  "sections": [
+    {
+      "id": "01",
+      "title": "WEB DEVELOPMENT",
+      "description": [
+        "Custom Website Design",
+        "Responsive Web Development",
+        "UI/UX Design",
+        "Landing Page Development",
+        "Ecommerce Website Development",
+        "Shopify/WooCommerce Development",
+        "Payment Gateway Integration",
+        "Product Catalog Management",
+        "Security Updates & Bug Fixes",
+        "Performance Optimization",
+        "Content Updates",
+        "Backup & Recovery",
+        "Content Web App Development",
+        "API Development & Integration",
+        "Database Management",
+        "Progressive Web Apps (PWA)",
+        "Technical SEO Implementation",
+        "Speed & Performance Optimization",
+        "Mobile & Accessibility Optimization",
+        "Domain Registration & Management",
+        "Website Hosting & Server Setup",
+        "SSL Certificate Installation"
+      ]
+    },
+    {
+      "id": "02",
+      "title": "SOCIAL MEDIA MARKETING",
+      "description": [
+        "Content Plan & Calendar Overview",
+        "Copywriter",
+        "Accounts Manager",
+        "Feed Content & Caption Creation",
+        "Story Content Creation",
+        "Post Edit Or Existing Videos",
+        "Hashtag Optimization & Strategy",
+        "Scheduling & Posting",
+        "Analytics & Reporting",
+        "Creative Concept Development & Direction",
+        "Content Strategy"
+      ]
+    },
+    {
+      "id": "03",
+      "title": "DIGITAL ADS",
+      "description": [
+        "Digital Ads Strategy & Planning",
+        "Audience Research & Targeting",
+        "Ad Creative Development (Images, Videos, Copy)",
+        "Campaign Setup & Management",
+        "A/B Testing & Optimization",
+        "Budget Allocation & Bidding Strategy",
+        "Performance Tracking & Analytics",
+        "Retargeting & Lookalike Audiences",
+        "Ad Placement Across Platforms",
+        "Landing Page Optimization For Conversions",
+        "Monthly Performance Reporting",
+        "Competitor Analysis & Benchmarking"
+      ]
+    },
+    {
+      "id": "04",
+      "title": "GRAPHIC DESIGN",
+      "description": [
+        "Branding & Logo Design",
+        "Social Media Graphics",
+        "Ad Creatives (Static & Motion)",
+        "Website & UI Design Elements",
+        "Brochures & Flyers",
+        "Business Cards & Stationery",
+        "Presentation & Pitch Deck Design",
+        "Infographics & Data Visualization",
+        "Email Newsletter Design",
+        "Packaging & Label Design",
+        "Print & Digital Banner Design",
+        "Custom Illustrations",
+        "Photo Editing & Retouching",
+        "GIF & Animated Graphics",
+        "Mockups & Prototypes"
+      ]
+    },
+
+     {
+      "id": "05",
+      "title": "EMAIL MARKETING",
+      "description": [
+      
+  "Email Campaign Strategy & Planning",
+  "Audience Segmentation & Targeting",
+  "Email Template Design & Layout",
+  "Copywriting & Content Creation",
+  "Automated Email Sequences",
+  "Newsletter Creation & Distribution",
+  "A/B Testing & Optimization",
+  "Personalization & Dynamic Content",
+  "Deliverability Monitoring & Spam Testing",
+  "Drip Campaign Management",
+  "List Management & Growth Strategy",
+  "Performance Tracking & Analytics",
+  "Retargeting & Re-engagement Campaigns",
+  "Transactional Email Setup",
+  "Integration with CRM & Marketing Tools"
+]
+
+      
+    }
+  ]
+}

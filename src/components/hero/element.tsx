@@ -2,8 +2,8 @@
 "use client";
 import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
-import { fraunces } from "@/components/themes/typography";
-import { montserrat } from "@/components/themes/typography";
+import { fraunces } from "@/components/themes/primary/typography";
+import { montserrat } from "@/components/themes/primary/typography";
 
 export const HeroContainer = styled('div')({
   flex: 1,
@@ -11,7 +11,7 @@ export const HeroContainer = styled('div')({
   width: '100%',
   height: '100vh',
   padding: '0rem 4rem 4rem',
- 
+  
 
 });
 
@@ -39,7 +39,7 @@ export const LeftSection = ({ children }: { children?: React.ReactNode }) => (
 export const RightSection = ({ children }: { children?: React.ReactNode }) => (
   <div
     style={{
-      flex: 1,
+      flex: 1,  
       backgroundColor: palettes.white,
       position: "relative",
     }}
@@ -48,7 +48,7 @@ export const RightSection = ({ children }: { children?: React.ReactNode }) => (
   </div>
 );
 
-export const CentralText = styled('div')({
+export const CentralText = styled('p')({
   position: "absolute",
   top: "50%",
   left: "50%",

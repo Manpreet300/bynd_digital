@@ -2,8 +2,9 @@
 import { Header } from "@/components/header/header";
 import { Hero } from "@/components/hero/hero";
 import { Elevate } from "@/components/elevate/elevate";
-import { fraunces, montserrat } from "@/components/themes/typography";
-import {Strategies} from "@/components/Strategies/strategies";
+import GallerySection from "@/components/ProjectHighlight/project";
+
+import {InformationSection} from "@/components/information/InformationSection";
 
 // import { CallToAction } from "@/components/presence_section/presence";
 
@@ -13,7 +14,8 @@ export default function HomePage() {
    <div><Header /></div>   
       <Hero />
       <Elevate />
-      <Strategies />
+      <InformationSection />
+      <GallerySection />
     </>
   );
 }

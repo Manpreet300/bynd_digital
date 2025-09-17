@@ -1,6 +1,6 @@
 "use client";
 import { styled } from "@mui/material/styles";
-import { fraunces, montserrat } from "@/components/themes/typography";
+import { fraunces, montserrat } from "@/components/themes/primary/typography";
 import { palettes } from "@/components/themes/palettes";
 
 
