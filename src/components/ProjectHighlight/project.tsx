@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import {
@@ -8,132 +9,89 @@ import {
   StyledImageContainer,
   StyledEmptyContainer,
 } from "./element";
- 
-interface GalleryItem {
-  id: number;
-  hasImage: boolean;
-  imageSrc?: string;
-  imageAlt?: string;
-}
- 
-const GallerySection: React.FC = () => {
-  const galleryItems: GalleryItem[] = [
-    //First Row
-    {
-      id: 0,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/200",
-      imageAlt: "Gallery image 1",
-    },
-    {
-      id: 1,
-      hasImage: false,
-    },
-    {
-      id: 2,
-      hasImage: false,
-    },
-    {
-      id: 3,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/300",
-      imageAlt: "Gallery image 2",
-    },
- 
-    //Second Row
-    {
-      id: 4,
-      hasImage: false,
-    },
-    {
-      id: 5,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/500",
-      imageAlt: "Gallery image 3",
-    },
-    {
-      id: 6,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/700",
-      imageAlt: "Gallery image 4",
-    },
-    {
-      id: 7,
-      hasImage: false,
-    },
-    //Third Row
-    {
-      id: 8,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/600",
-      imageAlt: "Gallery image 5",
-    },
-    {
-      id: 9,
-      hasImage: false,
-    },
-    {
-      id: 10,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/900",
-      imageAlt: "Gallery image 6",
-    },
-    {
-      id: 11,
-      hasImage: false,
-    },
-    // Fourth Row
-    {
-      id: 12,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/300",
-      imageAlt: "Gallery image 6",
-    },
-    {
-      id: 13,
-      hasImage: false,
-    },
-    {
-      id: 14,
-      hasImage: false,
-    },
-    {
-      id: 15,
-      hasImage: true,
-      imageSrc: "https://picsum.photos/600",
-      imageAlt: "Gallery image 6",
-    },
- 
-    // Set rows
-    ...Array.from({ length: 12 }, (_, index) => ({
-      id: index + 16,
-      hasImage: false,
-    })),
-  ];
- 
+import { GalleryItem, GalleryProps } from "./interface";
+
+const createImageItem = (id: number, imageSrc: string, imageAlt: string): GalleryItem => ({
+  id,
+  hasImage: true,
+  imageSrc,
+  imageAlt,
+});
+
+const createEmptyItem = (id: number): GalleryItem => ({
+  id,
+  hasImage: false,
+});
+
+const generateGalleryData = (): GalleryItem[] => {
+  const items: GalleryItem[] = [];
+
+  items.push(
+    createImageItem(0, "https://picsum.photos/400/400?random=1", "Gallery image 1"),
+    createEmptyItem(1),
+    createEmptyItem(2),
+    createImageItem(3, "https://picsum.photos/400/400?random=2", "Gallery image 2")
+  );
+
+  items.push(
+    createEmptyItem(4),
+    createImageItem(5, "https://picsum.photos/400/400?random=3", "Gallery image 3"),
+    createImageItem(6, "https://picsum.photos/400/400?random=4", "Gallery image 4"),
+    createEmptyItem(7)
+  );
+
+  items.push(
+    createImageItem(8, "https://picsum.photos/400/400?random=5", "Gallery image 5"),
+    createEmptyItem(9),
+    createEmptyItem(10),
+    createImageItem(11, "https://picsum.photos/400/400?random=6", "Gallery image 6")
+  );
+
+  items.push(
+    createImageItem(12, "https://picsum.photos/400/400?random=7", "Gallery image 7"),
+    createEmptyItem(13),
+    createImageItem(14, "https://picsum.photos/400/400?random=8", "Gallery image 8"),
+    createEmptyItem(15)
+  );
+
+  items.push(
+    createEmptyItem(16),
+    createImageItem(17, "https://picsum.photos/400/400?random=9", "Gallery image 9"),
+    createEmptyItem(18),
+    createImageItem(19, "https://picsum.photos/400/400?random=10", "Gallery image 10")
+  );
+
+  return items;
+};
+
+const GallerySection: React.FC<GalleryProps> = ({ items }) => {
+  const galleryItems = items || generateGalleryData();
+
+  const renderGalleryItem = (item: GalleryItem) => (
+    <StyledGridItem key={item.id} hasImage={item.hasImage}>
+      {item.hasImage && item.imageSrc ? (
+        <StyledImageContainer>
+          <Image
+            src={item.imageSrc}
+            alt={item.imageAlt || `Gallery image ${item.id + 1}`}
+            fill
+            sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            priority={item.id < 4}
+          />
+        </StyledImageContainer>
+      ) : (
+        <StyledEmptyContainer />
+      )}
+    </StyledGridItem>
+  );
+
   return (
     <StyledGalleryContainer>
       <StyledGridWrapper>
-        {galleryItems.map((item) => (
-          <StyledGridItem key={item.id} hasImage={item.hasImage}>
-            {item.hasImage && item.imageSrc ? (
-              <StyledImageContainer>
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt || `Gallery image ${item.id + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  priority={item.id < 4}
-                />
-              </StyledImageContainer>
-            ) : (
-              <StyledEmptyContainer></StyledEmptyContainer>
-            )}
-          </StyledGridItem>
-        ))}
+        {galleryItems.map(renderGalleryItem)}
       </StyledGridWrapper>
     </StyledGalleryContainer>
   );
 };
- 
+
 export default GallerySection;
