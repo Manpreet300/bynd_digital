@@ -1,10 +1,12 @@
+// components/hero/elements.tsx
 "use client";
 import { styled } from "@mui/material/styles";
 import { fraunces, montserrat } from "@/components/themes/primary/typography";
 import { palettes } from "@/components/themes/palettes";
-
+import { ImageProps } from "./interface";
 
 export const ElevateSection = styled('section')({
+  
   backgroundColor: palettes.gray,
   padding: '6rem 2rem',
   display: 'flex',
@@ -14,33 +16,61 @@ export const ElevateSection = styled('section')({
   minHeight: '100vh',
   boxSizing: 'border-box',
   overflow: 'hidden',
+  // Responsive padding
+  '@media (max-width: 768px)': {
+    padding: '4rem 1.5rem',
+  },
+  '@media (max-width: 480px)': {
+    padding: '2rem 1rem',
+  },
 });
 
 export const ElevateContainer = styled('div')({
   maxWidth: '900px',
   textAlign: 'center',
   position: 'relative',
+  width: '100%',
+  // Responsive max-width
+  '@media (max-width: 768px)': {
+    maxWidth: '100%',
+  },
 });
 
 export const CallToActionWrapper = styled('div')({
   position: 'absolute',
   top: '160px',
-  // bottom: '100px',
   left: '-100px',
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
+  // Responsive positioning
+  '@media (max-width: 1024px)': {
+    top: '100px',
+    left: '-50px',
+  },
+  '@media (max-width: 768px)': {
+    position: 'static',
+    justifyContent: 'center',
+    marginBottom: '2rem',
+  },
 });
 
-export const FlourishImage = styled('img')({
+export const FlourishImage = styled('img')<ImageProps>({
   width: '60px',
   height: 'auto',
+  // Responsive image size
+  '@media (max-width: 768px)': {
+    width: '40px',
+  },
+  '@media (max-width: 480px)': {
+    width: '30px',
+  },
 });
 
 export const LetsTalkButton = styled('button')({
   backgroundColor: palettes.bynd_red,
   color: palettes.white,
-   fontFamily: fraunces.style.fontFamily,
+  fontFamily: fraunces.style.fontFamily,
   border: 'none',
   borderRadius: '50px',
   padding: '0.8rem 1.5rem',
@@ -56,6 +86,11 @@ export const LetsTalkButton = styled('button')({
   '&:hover': {
     backgroundColor: '#ff6d63',
   },
+  // Responsive padding and font size
+  '@media (max-width: 480px)': {
+    padding: '0.6rem 1.2rem',
+    fontSize: '0.7rem',
+  },
 });
 
 export const ArrowRight = styled('span')({
@@ -66,6 +101,10 @@ export const ArrowRight = styled('span')({
   padding: '3px',
   transform: 'rotate(-45deg)',
   fontWeight: 600,
+  // Responsive arrow size
+  '@media (max-width: 480px)': {
+    padding: '2px',
+  },
 });
 
 export const ElevateText = styled('h2')({
@@ -76,13 +115,23 @@ export const ElevateText = styled('h2')({
   lineHeight: 1.3,
   userSelect: 'none',
   textAlign: 'center',
-
   'span.digital-presence': {
     fontStyle: 'italic',
-  }
+  },
+  // Responsive font size
+  '@media (max-width: 1024px)': {
+    fontSize: '4.5rem',
+  },
+  '@media (max-width: 768px)': {
+    fontSize: '3rem',
+  },
+  '@media (max-width: 480px)': {
+    fontSize: '2rem',
+    lineHeight: 1.4,
+  },
 });
 
-export const UnderlineImage = styled('img')({
+export const UnderlineImage = styled('img')<ImageProps>({
   position: 'absolute',
   width: '210px',
   height: 'auto',
@@ -91,14 +140,27 @@ export const UnderlineImage = styled('img')({
   transform: 'translateX(-50%)',
   pointerEvents: 'none',
   userSelect: 'none',
+  // Responsive image size
+  '@media (max-width: 768px)': {
+    width: '150px',
+    bottom: '-15px',
+  },
+  '@media (max-width: 480px)': {
+    width: '100px',
+    bottom: '-10px',
+  },
 });
 
-export const QuestionMarkImage = styled('img')({
+export const QuestionMarkImage = styled('img')<ImageProps>({
   display: 'inline-block',
-  width: '1em',        // match text size
+  width: '1em',
   height: '1em',
-  marginLeft: '0.2rem', // small spacing before ?
-  verticalAlign: 'baseline', // aligns with text baseline
+  marginLeft: '0.2rem',
+  verticalAlign: 'baseline',
   userSelect: 'none',
   pointerEvents: 'none',
+  // Responsive image size
+  '@media (max-width: 480px)': {
+    marginLeft: '0.1rem',
+  },
 });

@@ -7,6 +7,8 @@ import { OffCanvas } from "@/components/off_canvas/off_canvas";
 import { SocialIcon } from "@/components/social-icons/social-icon";
 import { ScrollIndicator } from "@/components/common/ScrollIndicator";
 import { DarkModeToggle } from "@/components/common/DarkModeToggle";
+
+
 export const Hero: React.FC = () => {
   const [isCanvasOpen, setIsCanvasOpen] = React.useState(false);
 
@@ -16,8 +18,6 @@ export const Hero: React.FC = () => {
         <LeftSection>
           <Menu onClick={() => setIsCanvasOpen(true)} />
           <ScrollIndicator />
-
-          {/* ✅ Only one OffCanvas inside LeftSection */}
           <OffCanvas isOpen={isCanvasOpen} onClose={() => setIsCanvasOpen(false)} />
         </LeftSection>
 

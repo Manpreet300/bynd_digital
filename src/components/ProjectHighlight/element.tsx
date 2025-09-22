@@ -4,9 +4,9 @@ import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
 
 export const StyledGalleryContainer = styled("section")(() => ({
+
   width: "100vw",
   height: "150vh",
-  margin: 0,
   padding: 0,
   overflow: "hidden",
   position: "relative",
@@ -20,6 +20,8 @@ export const StyledGalleryContainer = styled("section")(() => ({
 }));
 
 export const StyledGridWrapper = styled("div")(() => ({
+  maxWidth: "1440px",
+  margin: "0 auto",
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
   gridTemplateRows: "repeat(5, 1fr)",
@@ -27,10 +29,6 @@ export const StyledGridWrapper = styled("div")(() => ({
   height: "100%",
   gap: 0,
   
-  "@media (max-width: 1024px)": {
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gridTemplateRows: "repeat(4, 1fr)",
-  },
   "@media (max-width: 768px)": {
     gridTemplateColumns: "repeat(2, 1fr)",
     gridTemplateRows: "repeat(3, 1fr)",

@@ -4,45 +4,54 @@ import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
 import { fraunces } from "@/components/themes/primary/typography";
 import { montserrat } from "@/components/themes/primary/typography";
+import { SectionProps } from "./interface";
 
 export const HeroContainer = styled('div')({
   flex: 1,
   position: 'relative',
   width: '100%',
+    maxWidth: '1440px',
+  margin: '0 auto',
   height: '100vh',
   padding: '0rem 4rem 4rem',
-  
-
+  boxSizing: 'border-box',
+  // Responsive padding
+  '@media (max-width: 768px)': {
+    padding: '0rem 2rem 2rem',
+  },
+  '@media (max-width: 480px)': {
+    padding: '0rem 1rem 1rem',
+  },
 });
 
 export const SplitView = styled('div')({
   display: 'flex',
+  flexDirection: 'row', // Explicitly set to row for clarity
   width: '100%',
   height: '100%',
+  // No media query to change to column, keeping horizontal layout
 });
 
-// ⬇️ FIXED: now LeftSection accepts children
-export const LeftSection = ({ children }: { children?: React.ReactNode }) => (
+export const LeftSection = ({ children }: SectionProps) => (
   <div
     style={{
       flex: 1,
       backgroundColor: palettes.gray,
-      position: "relative", // ✅ allow absolute positioning
-      overflow: "hidden",   // ✅ hides OffCanvas when off-screen
-
-    }}
+      position: "relative",
+      overflow: "hidden",
+    } as any}
   >
     {children}
   </div>
 );
 
-export const RightSection = ({ children }: { children?: React.ReactNode }) => (
+export const RightSection = ({ children }: SectionProps) => (
   <div
     style={{
-      flex: 1,  
+      flex: 1,
       backgroundColor: palettes.white,
       position: "relative",
-    }}
+    } as any}
   >
     {children}
   </div>
@@ -55,12 +64,24 @@ export const CentralText = styled('p')({
   transform: "translate(-50%, -50%)",
   zIndex: 2,
   color: palettes.textDark,
-  fontFamily:montserrat.style.fontFamily,
+  fontFamily: montserrat.style.fontFamily,
   fontSize: "200px",
   fontWeight: 800,
-  lineHeight: 0.9,    
+  lineHeight: 0.9,
   letterSpacing: "-0.05em",
   userSelect: 'none',
+  // Responsive font size
+  '@media (max-width: 1024px)': {
+    fontSize: '120px',
+  },
+  '@media (max-width: 768px)': {
+    fontSize: '80px',
+  },
+  '@media (max-width: 480px)': {
+    fontSize: '40px',
+    lineHeight: 1.0,
+    letterSpacing: '-0.03em',
+  },
 });
 
 export const RedDot = styled("span")({
@@ -71,4 +92,15 @@ export const RedDot = styled("span")({
   borderRadius: '50%',
   marginLeft: '1rem',
   verticalAlign: 'middle',
+  // Responsive size
+  '@media (max-width: 768px)': {
+    width: '1.5rem',
+    height: '1.5rem',
+    marginLeft: '0.5rem',
+  },
+  '@media (max-width: 480px)': {
+    width: '1rem',
+    height: '1rem',
+    marginLeft: '0.3rem',
+  },
 });
