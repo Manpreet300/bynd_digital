@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   StyledGalleryContainer,
@@ -65,7 +65,27 @@ const generateGalleryData = (): GalleryItem[] => {
 };
 
 const GallerySection: React.FC<GalleryProps> = ({ items }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width <= 480);
+      setIsTablet(width > 480 && width <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const galleryItems = items || generateGalleryData();
+  
+  // Filter items based on screen size
+  const filteredItems = (isMobile || isTablet) 
+    ? galleryItems.filter(item => item.hasImage) // Show only items with images on mobile/tablet
+    : galleryItems; // Show all items (including empty) on desktop
 
   const renderGalleryItem = (item: GalleryItem) => (
     <StyledGridItem key={item.id} hasImage={item.hasImage}>
@@ -88,7 +108,7 @@ const GallerySection: React.FC<GalleryProps> = ({ items }) => {
   return (
     <StyledGalleryContainer>
       <StyledGridWrapper>
-        {galleryItems.map(renderGalleryItem)}
+        {filteredItems.map(renderGalleryItem)}
       </StyledGridWrapper>
     </StyledGalleryContainer>
   );

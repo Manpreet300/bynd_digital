@@ -12,10 +12,12 @@ export const StyledGalleryContainer = styled("section")(() => ({
   position: "relative",
   
   "@media (max-width: 768px)": {
-    height: "100vh",
+    height: "auto", // Changed to auto to accommodate more images
+    minHeight: "100vh",
   },
   "@media (max-width: 480px)": {
-    height: "80vh",
+    height: "auto", // Changed to auto to accommodate more images
+    minHeight: "80vh",
   },
 }));
 
@@ -31,11 +33,13 @@ export const StyledGridWrapper = styled("div")(() => ({
   
   "@media (max-width: 768px)": {
     gridTemplateColumns: "repeat(2, 1fr)",
-    gridTemplateRows: "repeat(3, 1fr)",
+    gridTemplateRows: "auto", // Changed to auto to show all rows
+    height: "auto", // Changed to auto
   },
   "@media (max-width: 480px)": {
     gridTemplateColumns: "repeat(1, 1fr)",
-    gridTemplateRows: "repeat(6, 1fr)",
+    gridTemplateRows: "auto", // Changed to auto to show all rows
+    height: "auto", // Changed to auto
   },
 }));
 
@@ -65,11 +69,12 @@ export const StyledGridItem = styled("div", {
     },
 
     "@media (max-width: 768px)": {
-      display: hasImage ? "flex" : "none",
+      display: "flex", // Changed: Always show, don't hide empty items
       minHeight: "200px",
     },
     
     "@media (max-width: 480px)": {
+      display: "flex", // Changed: Always show, don't hide empty items
       minHeight: "250px",
     },
   };
