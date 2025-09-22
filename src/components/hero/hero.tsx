@@ -15,8 +15,8 @@ export const Hero: React.FC = () => {
   return (
     <HeroContainer>
       <SplitView>
+        <Menu onClick={() => setIsCanvasOpen(true)} />
         <LeftSection>
-          <Menu onClick={() => setIsCanvasOpen(true)} />
           <ScrollIndicator />
           <OffCanvas isOpen={isCanvasOpen} onClose={() => setIsCanvasOpen(false)} />
         </LeftSection>

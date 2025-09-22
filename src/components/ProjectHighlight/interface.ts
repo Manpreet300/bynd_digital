@@ -1,3 +1,5 @@
+import { ProjectHighlightsProps } from "../HighlightText/interface";
+
 export interface GalleryItem {
   id: number;
   hasImage: boolean;
@@ -7,6 +9,11 @@ export interface GalleryItem {
 
 export interface GalleryProps {
   items?: GalleryItem[];
+  mobileBreakpoint?: number;
+  tabletBreakpoint?: number;
+  headingProps?: ProjectHighlightsProps;
+  containerClassName?: string;
+  renderCustomItem?: (item: GalleryItem) => React.ReactNode;
 }
 
 export type GalleryItemWithImage = GalleryItem & {

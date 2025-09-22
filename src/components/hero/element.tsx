@@ -37,9 +37,9 @@ export const LeftSection = ({ children }: SectionProps) => (
     style={{
       flex: 1,
       backgroundColor: palettes.gray,
-      position: "relative",
-      overflow: "hidden",
-    } as any}
+      position: 'relative',
+      overflow: 'hidden',
+    }}
   >
     {children}
   </div>
@@ -50,8 +50,8 @@ export const RightSection = ({ children }: SectionProps) => (
     style={{
       flex: 1,
       backgroundColor: palettes.white,
-      position: "relative",
-    } as any}
+      position: 'relative',
+    } as React.CSSProperties}
   >
     {children}
   </div>
@@ -75,10 +75,10 @@ export const CentralText = styled('p')({
     fontSize: '120px',
   },
   '@media (max-width: 768px)': {
-    fontSize: '80px',
+    fontSize: '100px',
   },
   '@media (max-width: 480px)': {
-    fontSize: '40px',
+    fontSize: '70px',
     lineHeight: 1.0,
     letterSpacing: '-0.03em',
   },
