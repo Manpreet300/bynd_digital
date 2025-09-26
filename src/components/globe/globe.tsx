@@ -21,10 +21,10 @@ const countries = [
 
 export const Globe: React.FC = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
-  const marqueeCount = isSmallScreen ? 2 : isMediumScreen ? 6 : 8;
+  const marqueeCount = isSmallScreen ? 2 : isMediumScreen ? 6 : 6;
 
   const marquees = Array.from({ length: marqueeCount }, (_, index) => {
     const direction = index % 2 === 0 ? "right" : "left";

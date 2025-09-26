@@ -11,15 +11,15 @@ export const StyledContainer = styled("section")<EmptySectionProps>(({ theme }) 
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-around",
-  padding: theme.spacing(2), // Responsive padding
+  padding: theme.spacing(0), // Responsive padding
   boxSizing: "border-box", // Ensure padding doesn't cause overflow
 
   // Responsive adjustments
   [theme.breakpoints.down("md")]: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(0),
   },
   [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(0.5),
+    padding: theme.spacing(0),
   },
   [theme.breakpoints.down("xs")]: {
     minHeight: "80vh", // Slightly smaller for very small screens
@@ -29,9 +29,10 @@ export const StyledContainer = styled("section")<EmptySectionProps>(({ theme }) 
 export const MarqueeText = styled("div")(({ theme }) => ({
   color: palettes.gray || "#666",
   fontWeight: "bold",
-  fontSize: "clamp(2.5rem, 5vw, 6rem)", 
-  margin: theme.spacing(0, 5), // Use theme spacing for consistency
+  fontSize: "clamp(2.5rem, 9vw, 6rem)", 
+  margin: theme.spacing(0, 2, 0, 2), // Explicitly set top and bottom margin to 0
   textTransform: "uppercase",
   whiteSpace: "nowrap",
   overflow: "hidden",  
+  lineHeight: 1, // Also removes line height spacing if needed
 }));
