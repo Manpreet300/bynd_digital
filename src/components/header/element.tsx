@@ -4,6 +4,11 @@ import { styled } from "@mui/material/styles";
 import { palettes } from "@/components/themes/palettes";
 import { HeaderContainerProps, LanguageWrapperProps, LanguageItemProps } from "./interface";
 
+export const RootContainer = styled('div')({
+  width: '100%',
+  backgroundColor: palettes.light,
+});
+
 export const HeaderContainer = styled('header')<HeaderContainerProps>(({ theme, showBorder = true }) => ({
   width: '100%',
   maxWidth: '1440px',
@@ -90,7 +95,7 @@ export const LanguageItem = styled('span', {
   fontSize: "1rem",
   color: active ? palettes.textDark : palettes.gray,
   transition: "all 0.2s ease",
-  
+
   [theme.breakpoints.down('md')]: {
     fontSize: "0.95rem",
   },
@@ -109,18 +114,14 @@ export const LanguageItem = styled('span', {
       transform: "translateY(-1px)",
     },
   },
-  
+
   "&::after": {
     content: '"."',
     marginLeft: "0.3rem",
-    color: active ? palettes.bynd_red : palettes.gray,
-    
+    color: palettes.bynd_red, // Always red dot
     [theme.breakpoints.down('sm')]: {
       marginLeft: "0.2rem",
     },
   },
-  
-  "&:last-child::after": {
-    content: '""',
-  },
+
 }));

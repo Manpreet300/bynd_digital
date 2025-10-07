@@ -28,43 +28,42 @@ const generateGalleryData = (): GalleryItem[] => {
   const items: GalleryItem[] = [];
 
   items.push(
-    createImageItem(0, "https://picsum.photos/400/400?random=1", "Gallery image 1"),
+    createImageItem(0, "/1.png", "Gallery image 1"),
     createEmptyItem(1),
     createEmptyItem(2),
-    createImageItem(3, "https://picsum.photos/400/400?random=2", "Gallery image 2")
+    createImageItem(3, "/2.png", "Gallery image 2")
   );
 
   items.push(
     createEmptyItem(4),
-    createImageItem(5, "https://picsum.photos/400/400?random=3", "Gallery image 3"),
-    createImageItem(6, "https://picsum.photos/400/400?random=4", "Gallery image 4"),
+    createImageItem(5, "/3.png", "Gallery image 3"),
+    createImageItem(6, "/4.png", "Gallery image 4"),
     createEmptyItem(7)
   );
 
   items.push(
-    createImageItem(8, "https://picsum.photos/400/400?random=5", "Gallery image 5"),
+    createImageItem(8, "/5.png", "Gallery image 5"),
     createEmptyItem(9),
     createEmptyItem(10),
-    createImageItem(11, "https://picsum.photos/400/400?random=6", "Gallery image 6")
+    createImageItem(11, "/6.png", "Gallery image 6")
   );
 
   items.push(
-    createImageItem(12, "https://picsum.photos/400/400?random=7", "Gallery image 7"),
+    createImageItem(12, "/7.png", "Gallery image 7"),
     createEmptyItem(13),
-    createImageItem(14, "https://picsum.photos/400/400?random=8", "Gallery image 8"),
+    createImageItem(14, "/8.png", "Gallery image 8"),
     createEmptyItem(15)
   );
 
   items.push(
     createEmptyItem(16),
-    createImageItem(17, "https://picsum.photos/400/400?random=9", "Gallery image 9"),
+    createImageItem(17, "/9.png", "Gallery image 9"),
     createEmptyItem(18),
-    createImageItem(19, "https://picsum.photos/400/400?random=10", "Gallery image 10")
+    createImageItem(19, "/10.png", "Gallery image 10")
   );
 
   return items;
 };
-
 const GallerySection: React.FC<GalleryProps> = ({ items }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);

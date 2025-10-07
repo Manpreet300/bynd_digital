@@ -1,7 +1,7 @@
 // components/header/header.tsx
 "use client";
 import React, { useState } from "react";
-import { HeaderContainer, LanguageWrapper, LanguageItem } from "./element";
+import { HeaderContainer, LanguageWrapper, LanguageItem, RootContainer } from "./element";
 import { Logo } from "@/components/logo/logo";
 import { HeaderProps, LanguageCode, isLanguageCode } from "./interface";
 
@@ -25,22 +25,24 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <HeaderContainer showBorder={showBorder} sx={sx} className={className}>
-      <Logo 
-        size={logoSize} 
-        variant={logoVariant}
-      />
-      <LanguageWrapper>
-        {languages.map((lang) => (
-          <LanguageItem
-            key={lang}
-            active={activeLanguage === lang}
-            onClick={() => handleLanguageChange(lang)}
-          >
-            {lang}
-          </LanguageItem>
-        ))}
-      </LanguageWrapper>
-    </HeaderContainer>
+    <RootContainer>
+      <HeaderContainer showBorder={showBorder} sx={sx} className={className}>
+        <Logo 
+          size={logoSize} 
+          variant={logoVariant}
+        />
+        <LanguageWrapper>
+          {languages.map((lang) => (
+            <LanguageItem
+              key={lang}
+              active={activeLanguage === lang}
+              onClick={() => handleLanguageChange(lang)}
+            >
+              {lang}
+            </LanguageItem>
+          ))}
+        </LanguageWrapper>
+      </HeaderContainer>
+    </RootContainer>
   );
 };

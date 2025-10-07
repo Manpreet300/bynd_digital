@@ -6,11 +6,22 @@ import { fraunces } from "@/components/themes/primary/typography";
 import { montserrat } from "@/components/themes/primary/typography";
 import { SectionProps } from "./interface";
 
+
+export const RootContainer = styled('div')({
+  flex: 1,
+  position: 'relative',
+  width: '100%',
+  backgroundColor: palettes.light,
+  margin: '0 auto',
+  height: '100vh',
+
+});
+
 export const HeroContainer = styled('div')({
   flex: 1,
   position: 'relative',
   width: '100%',
-    maxWidth: '1440px',
+  maxWidth: '1440px',
   margin: '0 auto',
   height: '100vh',
   padding: '0rem 4rem 4rem',

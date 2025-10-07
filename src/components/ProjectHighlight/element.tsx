@@ -22,7 +22,7 @@ export const StyledGalleryContainer = styled("section")(() => ({
 }));
 
 export const StyledGridWrapper = styled("div")(() => ({
-  maxWidth: "1440px",
+  maxWidth: "100%",
   margin: "0 auto",
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
